@@ -1,0 +1,23 @@
+{
+  "name": "line-bot-azure-face-api-handson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson/issues"
+  },
+  "homepage": "https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
