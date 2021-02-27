@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "express": "node index.js",
-    "deploy": "gh-pages -d _book"
+    "deploy": "honkit build && gh-pages -d _book"
   },
   "repository": {
     "type": "git",
