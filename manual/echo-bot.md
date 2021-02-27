@@ -85,4 +85,6 @@ Botページに表示されているQRコードを読み取り、Botと友達に
 
 <a href="https://gyazo.com/00ddda4e792010c515d98825fca042c2"><img src="https://i.gyazo.com/00ddda4e792010c515d98825fca042c2.gif" alt="Image from Gyazo" width="434"/></a>
 
-オウム返しBotの作成は以上で完了です！次はBotをFace APIと組み合わせていきます。
+オウム返しBotの作成は以上で完了です！次はAIのサービスの一つである`Face API`と組み合わせていきます。
+
+> [←目次に戻る](https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson)
