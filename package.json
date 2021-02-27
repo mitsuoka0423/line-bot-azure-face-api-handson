@@ -19,6 +19,7 @@
   "homepage": "https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson#readme",
   "dependencies": {
     "@azure/cognitiveservices-face": "^4.1.0",
+    "@azure/ms-rest-azure-js": "^2.1.0",
     "dotenv": "^8.2.0"
   }
 }
