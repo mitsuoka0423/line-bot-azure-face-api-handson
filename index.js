@@ -1,5 +1,4 @@
 'use strict';
-require('dotenv').config();
 
 // ########################################
 //               初期設定など
@@ -11,8 +10,8 @@ const { CognitiveServicesCredentials } = require("@azure/ms-rest-azure-js");
 
 const PORT = process.env.PORT || 3000;
 const config = {
-  channelSecret: process.env.channelSecret,
-  channelAccessToken: process.env.channelAccessToken,
+  channelSecret: 'チャネルシークレットを記入する',
+  channelAccessToken: 'チャネルアクセストークンを記入する',
 };
 const client = new line.Client(config);
 
@@ -111,8 +110,8 @@ app.listen(PORT);
 console.log(`ポート${PORT}番でExpressサーバーを実行中です…`);
 
 // async function main() {
-//   const faceKey = process.env["faceKey"] || "<faceKey>";
-//   const faceEndPoint = process.env["faceEndPoint"] || "<faceEndPoint>";
+//   const faceKey = 'FaceKeyを記入する';
+//   const faceEndPoint = 'FaceEndpointを記入する';
 //   console.log({faceKey, faceEndPoint});
 //   const cognitiveServiceCredentials = new CognitiveServicesCredentials(faceKey);
 //   const client = new FaceClient(cognitiveServiceCredentials, faceEndPoint);
