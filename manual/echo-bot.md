@@ -17,8 +17,7 @@ Gitpodは、オンライン利用できるエディタです。
 以下のURLを開きましょう。  
 https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson
 
-`表示された方のみ`  
-GitHubアカウントでログインしましょう。
+GitHubアカウントでログインします。
 
 <a href="https://gyazo.com/14aca92f43ed9cfa88f3484178124d0d"><img src="https://i.gyazo.com/14aca92f43ed9cfa88f3484178124d0d.png" alt="Image from Gyazo" width="1000"/></a>
 
