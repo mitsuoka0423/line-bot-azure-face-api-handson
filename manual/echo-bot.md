@@ -23,7 +23,7 @@
 LINE Botとは、LINEアプリ上で動くプログラムのことです。  
 LINEアプリとプログラムの連携には、LINEが提供している`Messaging API`を利用します。
 
-### システムの全体イメージ
+### システム概要図
 
 本ハンズオンでの登場人物は以下の3つです。  
 主に、サーバーの部分のプログラムを編集していきます。
@@ -37,7 +37,7 @@ LINEアプリとプログラムの連携には、LINEが提供している`Messa
 `2. 感情分析AIと組み合わせよう`では、LINEアプリから送信した画像を、Azure Face APIに送信し感情分析します。  
 その結果をサーバーで変換して、LINEアプリに結果を表示します。
 
-<a href="https://gyazo.com/33774c2087d89d3b6bb3e6a5079c44f7"><img src="https://i.gyazo.com/33774c2087d89d3b6bb3e6a5079c44f7.png" alt="Image from Gyazo" width="823"/></a>
+<a href="https://gyazo.com/221d9176e00f46fb5923f0c4944e6274"><img src="https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png" alt="Image from Gyazo" width="987"/></a>
 
 ## ここからは手を動かすタイム
 
