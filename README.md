@@ -20,7 +20,7 @@ https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-hand
 ## インストール
 
 ```bash
-$ npm install
+$ npm ci
 ```
 
 ## 実行
