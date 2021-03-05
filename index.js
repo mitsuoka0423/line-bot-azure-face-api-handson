@@ -9,11 +9,19 @@ const { FaceClient, FaceModels } = require("@azure/cognitiveservices-face");
 const { CognitiveServicesCredentials } = require("@azure/ms-rest-azure-js");
 
 const PORT = process.env.PORT || 3000;
+
+// LINE Botパラメータ
+// 1. オウム返しBotを作ろう で設定します
 const config = {
   channelSecret: 'チャネルシークレットを記入する',
   channelAccessToken: 'チャネルアクセストークンを記入する',
 };
 const client = new line.Client(config);
+
+// Face APIパラメータ
+// 2. AIと組み合わせよう で設定します。
+const faceKey = 'FaceKeyを記入する';
+const faceEndPoint = 'FaceEndpointを記入する';
 
 // ########################################
 //  LINEサーバーからのWebhookデータを処理する部分
