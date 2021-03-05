@@ -10,6 +10,8 @@ module.exports = {
   },
   plugins: ['prettier'],
   rules: {
+    'require-jsdoc': 'off',
+    'object-curly-spacing': 'never',
     'prettier/prettier': [
       'error',
       {
