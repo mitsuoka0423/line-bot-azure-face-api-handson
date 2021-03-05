@@ -1,10 +1,11 @@
 {
   "name": "line-bot-azure-face-api-handson",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is handson material for creating LINE Bot and Face API.",
   "main": "index.js",
   "scripts": {
     "express": "node index.js",
+    "serve": "honkit serve",
     "deploy": "honkit build && gh-pages -d _book"
   },
   "repository": {
