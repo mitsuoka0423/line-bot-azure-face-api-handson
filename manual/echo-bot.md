@@ -14,15 +14,84 @@
 
 ### LINE Botとは？
 
-// TODO
+そもそもBotとは、ロボット(Robot)が語源の言葉で、インターネット上で反復タスクを実行するプログラムのことです。  
+
+> ボットとは？：https://www.cloudflare.com/ja-jp/learning/bots/what-is-a-bot/
+
+最近では、チャットボットやツイートボット、SEOの分野ではGooglebotなどが有名です。
+
+LINE Botとは、LINEアプリ上で動くプログラムのことです。  
+LINEアプリとプログラムの連携には、LINEが提供している`Messaging API`を利用します。
+
+### システムの全体イメージ
+
+本ハンズオンでの登場人物は以下の3つです。  
+主に、サーバーの部分のプログラムを編集していきます。
+
+<a href="https://gyazo.com/1ceade2f10b784b68f3bed71efcf83e3"><img src="https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3.png" alt="Image from Gyazo" width="933"/></a>
+
+`1. オウム返しBotを作ろう`では、LINEアプリから送信した文字列をサーバーで受け取り、LINEアプリにそのまま返すオウム返しBotを作成します。
+
+<a href="https://gyazo.com/ef380d63c53fba3e41b79216fb7f0070"><img src="https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png" alt="Image from Gyazo" width="822"/></a>
+
+`2. 感情分析AIと組み合わせよう`では、LINEアプリから送信した画像を、Azure Face APIに送信し感情分析します。  
+その結果をサーバーで変換して、LINEアプリに結果を表示します。
+
+<a href="https://gyazo.com/33774c2087d89d3b6bb3e6a5079c44f7"><img src="https://i.gyazo.com/33774c2087d89d3b6bb3e6a5079c44f7.png" alt="Image from Gyazo" width="823"/></a>
 
 ## ここからは手を動かすタイム
 
 <a href="https://gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74"><img src="https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png" alt="Image from Gyazo" width="500"/></a>
 
-### チャンネルを作ろう
+### LINE Botを登録しよう
 
-// TODO  LINE Developersでチャンネルを作るまでの手順を書く
+LINE Botは、LINE Developersから登録する必要があります。
+
+LINE Developers([https://developers.line.biz/ja/](https://developers.line.biz/ja/))を開き、ログインします。
+
+<a href="https://gyazo.com/55926be4e43791a4d30a2c4fa35b77c1"><img src="https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1.png" alt="Image from Gyazo" width="912"/></a>
+
+<a href="https://gyazo.com/6921026259dc0cacb200097e82340289"><img src="https://i.gyazo.com/6921026259dc0cacb200097e82340289.png" alt="Image from Gyazo" width="912"/></a>
+
+ログインできたら、プロバイダーの`作成`をクリックします。
+
+<a href="https://gyazo.com/ef306d3ca442a7a8df95cce418778b57"><img src="https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57.png" alt="Image from Gyazo" width="1249"/></a>
+
+プロバイダー名を入力し、`作成`をクリックします。（名前は好きなものでOKです。）
+
+<a href="https://gyazo.com/718446885e86eb2f547379fb63fbbd59"><img src="https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59.png" alt="Image from Gyazo" width="1249"/></a>
+
+Messaging APIを作成します。
+
+<a href="https://gyazo.com/ca20e71a634a089a5ce80aeda3dd065a"><img src="https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a.png" alt="Image from Gyazo" width="1249"/></a>
+
+必要な項目を入力し、`作成`をクリックします。
+
+| 項目 | 内容 | 備考 |
+| -- | -- | -- |
+| プロバイダー | 先程作成したものを選択 | -- |
+| チャネル名 | 好きな名前 | Bot名になります。`LINE`という文字は入れられないので注意。 |
+| チャネル説明 | チャネルの説明 | -- |
+| 大業種 | 適当に選択 | -- |
+| 小業種 | 適当に選択 | -- |
+
+<a href="https://gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed"><img src="https://i.gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed.png" alt="Image from Gyazo" width="1249"/></a>
+
+<a href="https://gyazo.com/378b1d61ba94943527c9af268b1ec0d6"><img src="https://i.gyazo.com/378b1d61ba94943527c9af268b1ec0d6.png" alt="Image from Gyazo" width="1249"/></a>
+
+<a href="https://gyazo.com/7b46e4c918db445c98c876a175c975d4"><img src="https://i.gyazo.com/7b46e4c918db445c98c876a175c975d4.png" alt="Image from Gyazo" width="1249"/></a>
+
+<a href="https://gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc"><img src="https://i.gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc.png" alt="Image from Gyazo" width="1249"/></a>
+
+こんな画面が表示されれば登録完了です。
+
+<a href="https://gyazo.com/331c4e70599ed34ffb735ea0c9b5a772"><img src="https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772.png" alt="Image from Gyazo" width="1134"/></a>
+
+QRコードをLINEアプリで読み取り、友達登録しましょう。
+
+<a href="https://gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b"><img src="https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b.png" alt="Image from Gyazo" width="1134"/></a>
+
+<a href="https://gyazo.com/1e6049acab5fcc1a83f73000949701f6"><img src="https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6.png" alt="Image from Gyazo" width="400"/></a>
 
 ### Gitpodを開こう
 
