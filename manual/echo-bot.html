@@ -123,7 +123,7 @@
                 <a href="face-api.html">
             
                     
-                    AIと組み合わせよう
+                    感情分析AIと組み合わせよう
             
                 </a>
             
@@ -199,10 +199,11 @@
 <li><div><a href="#ここからは話を聞くタイム">ここからは話を聞くタイム</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
 <ul>
 <li><div><a href="#line-botとは？">LINE Botとは？</a><i></i></div></li>
+<li><div><a href="#システムの全体イメージ">システムの全体イメージ</a><i></i></div></li>
 </ul></li>
 <li><div><a href="#ここからは手を動かすタイム">ここからは手を動かすタイム</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
 <ul>
-<li><div><a href="#チャンネルを作ろう">チャンネルを作ろう</a><i></i></div></li>
+<li><div><a href="#line-botを登録しよう">LINE Botを登録しよう</a><i></i></div></li>
 <li><div><a href="#gitpodを開こう">Gitpodを開こう</a><i></i></div></li>
 <li><div><a href="#オウム返しbotを動かしてみよう">オウム返しBotを動かしてみよう</a><i></i></div></li>
 </ul></li>
@@ -221,11 +222,78 @@
 <h2 id="ここからは話を聞くタイム">ここからは話を聞くタイム</h2>
 <p><a href="https://gyazo.com/6529781dd996c64228080c383aa4a325" target="_blank"><img src="https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png" alt="Image from Gyazo" width="500"></a></p>
 <h3 id="line-botとは？">LINE Botとは？</h3>
-<p>// TODO</p>
+<p>そもそもBotとは、ロボット(Robot)が語源の言葉で、インターネット上で反復タスクを実行するプログラムのことです。  </p>
+<blockquote>
+<p>ボットとは？：<a href="https://www.cloudflare.com/ja-jp/learning/bots/what-is-a-bot/" target="_blank">https://www.cloudflare.com/ja-jp/learning/bots/what-is-a-bot/</a></p>
+</blockquote>
+<p>最近では、チャットボットやツイートボット、SEOの分野ではGooglebotなどが有名です。</p>
+<p>LINE Botとは、LINEアプリ上で動くプログラムのことです。<br>LINEアプリとプログラムの連携には、LINEが提供している<code>Messaging API</code>を利用します。</p>
+<h3 id="システムの全体イメージ">システムの全体イメージ</h3>
+<p>本ハンズオンでの登場人物は以下の3つです。<br>主に、サーバーの部分のプログラムを編集していきます。</p>
+<p><a href="https://gyazo.com/1ceade2f10b784b68f3bed71efcf83e3" target="_blank"><img src="https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3.png" alt="Image from Gyazo" width="933"></a></p>
+<p><code>1. オウム返しBotを作ろう</code>では、LINEアプリから送信した文字列をサーバーで受け取り、LINEアプリにそのまま返すオウム返しBotを作成します。</p>
+<p><a href="https://gyazo.com/ef380d63c53fba3e41b79216fb7f0070" target="_blank"><img src="https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png" alt="Image from Gyazo" width="822"></a></p>
+<p><code>2. 感情分析AIと組み合わせよう</code>では、LINEアプリから送信した画像を、Azure Face APIに送信し感情分析します。<br>その結果をサーバーで変換して、LINEアプリに結果を表示します。</p>
+<p><a href="https://gyazo.com/33774c2087d89d3b6bb3e6a5079c44f7" target="_blank"><img src="https://i.gyazo.com/33774c2087d89d3b6bb3e6a5079c44f7.png" alt="Image from Gyazo" width="823"></a></p>
 <h2 id="ここからは手を動かすタイム">ここからは手を動かすタイム</h2>
 <p><a href="https://gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74" target="_blank"><img src="https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png" alt="Image from Gyazo" width="500"></a></p>
-<h3 id="チャンネルを作ろう">チャンネルを作ろう</h3>
-<p>// TODO  LINE Developersでチャンネルを作るまでの手順を書く</p>
+<h3 id="line-botを登録しよう">LINE Botを登録しよう</h3>
+<p>LINE Botは、LINE Developersから登録する必要があります。</p>
+<p>LINE Developers(<a href="https://developers.line.biz/ja/" target="_blank">https://developers.line.biz/ja/</a>)を開き、ログインします。</p>
+<p><a href="https://gyazo.com/55926be4e43791a4d30a2c4fa35b77c1" target="_blank"><img src="https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1.png" alt="Image from Gyazo" width="912"></a></p>
+<p><a href="https://gyazo.com/6921026259dc0cacb200097e82340289" target="_blank"><img src="https://i.gyazo.com/6921026259dc0cacb200097e82340289.png" alt="Image from Gyazo" width="912"></a></p>
+<p>ログインできたら、プロバイダーの<code>作成</code>をクリックします。</p>
+<p><a href="https://gyazo.com/ef306d3ca442a7a8df95cce418778b57" target="_blank"><img src="https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57.png" alt="Image from Gyazo" width="1249"></a></p>
+<p>プロバイダー名を入力し、<code>作成</code>をクリックします。（名前は好きなものでOKです。）</p>
+<p><a href="https://gyazo.com/718446885e86eb2f547379fb63fbbd59" target="_blank"><img src="https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59.png" alt="Image from Gyazo" width="1249"></a></p>
+<p>Messaging APIを作成します。</p>
+<p><a href="https://gyazo.com/ca20e71a634a089a5ce80aeda3dd065a" target="_blank"><img src="https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a.png" alt="Image from Gyazo" width="1249"></a></p>
+<p>必要な項目を入力し、<code>作成</code>をクリックします。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プロバイダー</td>
+<td>先程作成したものを選択</td>
+<td>--</td>
+</tr>
+<tr>
+<td>チャネル名</td>
+<td>好きな名前</td>
+<td>Bot名になります。<code>LINE</code>という文字は入れられないので注意。</td>
+</tr>
+<tr>
+<td>チャネル説明</td>
+<td>チャネルの説明</td>
+<td>--</td>
+</tr>
+<tr>
+<td>大業種</td>
+<td>適当に選択</td>
+<td>--</td>
+</tr>
+<tr>
+<td>小業種</td>
+<td>適当に選択</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed" target="_blank"><img src="https://i.gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed.png" alt="Image from Gyazo" width="1249"></a></p>
+<p><a href="https://gyazo.com/378b1d61ba94943527c9af268b1ec0d6" target="_blank"><img src="https://i.gyazo.com/378b1d61ba94943527c9af268b1ec0d6.png" alt="Image from Gyazo" width="1249"></a></p>
+<p><a href="https://gyazo.com/7b46e4c918db445c98c876a175c975d4" target="_blank"><img src="https://i.gyazo.com/7b46e4c918db445c98c876a175c975d4.png" alt="Image from Gyazo" width="1249"></a></p>
+<p><a href="https://gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc" target="_blank"><img src="https://i.gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc.png" alt="Image from Gyazo" width="1249"></a></p>
+<p>こんな画面が表示されれば登録完了です。</p>
+<p><a href="https://gyazo.com/331c4e70599ed34ffb735ea0c9b5a772" target="_blank"><img src="https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772.png" alt="Image from Gyazo" width="1134"></a></p>
+<p>QRコードをLINEアプリで読み取り、友達登録しましょう。</p>
+<p><a href="https://gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b" target="_blank"><img src="https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b.png" alt="Image from Gyazo" width="1134"></a></p>
+<p><a href="https://gyazo.com/1e6049acab5fcc1a83f73000949701f6" target="_blank"><img src="https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6.png" alt="Image from Gyazo" width="400"></a></p>
 <h3 id="gitpodを開こう">Gitpodを開こう</h3>
 <p>Gitpodは、オンライン利用できるエディタです。</p>
 <p>以下のURLを開きましょう。<br><a href="https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson" target="_blank">https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson</a></p>
@@ -299,7 +367,7 @@
                 </a>
                 
                 
-                <a href="face-api.html" class="navigation navigation-next " aria-label="Next page: AIと組み合わせよう">
+                <a href="face-api.html" class="navigation navigation-next " aria-label="Next page: 感情分析AIと組み合わせよう">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -310,7 +378,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"next":{"title":"AIと組み合わせよう","level":"1.3","depth":1,"path":"manual/face-api.md","ref":"manual/face-api.md","articles":[]},"previous":{"title":"TOP","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-treeview"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"2","minHeaderDeep":"2","collapsed":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"【ハンズオン資料】写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~","gitbook":"*","description":"ハンズオン - 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~"},"file":{"path":"manual/echo-bot.md","mtime":"2021-03-05T18:57:43.400Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T18:57:52.298Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"next":{"title":"感情分析AIと組み合わせよう","level":"1.3","depth":1,"path":"manual/face-api.md","ref":"manual/face-api.md","articles":[]},"previous":{"title":"TOP","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-treeview"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"2","minHeaderDeep":"2","collapsed":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"【ハンズオン資料】写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~","gitbook":"*","description":"ハンズオン - 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~"},"file":{"path":"manual/echo-bot.md","mtime":"2021-03-05T20:31:47.297Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T20:31:55.572Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
