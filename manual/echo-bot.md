@@ -1,10 +1,23 @@
 # オウム返しBotを作ろう
 
-この章では、送信した文字をそのまま返す`オウム返しBot`を作成していきます。
+> この章でできるもの
+> - 送信した文字をそのまま返す`オウム返しBot`
 
 ### 完成イメージ
 
 <a href="https://gyazo.com/00ddda4e792010c515d98825fca042c2"><img src="https://i.gyazo.com/00ddda4e792010c515d98825fca042c2.gif" alt="Image from Gyazo" width="434"/></a>
+
+<h2>ここからは話を聞くタイムです</h2>
+
+<a href="https://gyazo.com/6529781dd996c64228080c383aa4a325"><img src="https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png" alt="Image from Gyazo" width="500"/></a>
+
+## LINE Botとは？
+
+// TODO
+
+<h2>ここからは手を動かすタイムです</h2>
+
+<a href="https://gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74"><img src="https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png" alt="Image from Gyazo" width="500"/></a>
 
 ## チャンネルを作ろう
 
@@ -86,4 +99,4 @@ Botページに表示されているQRコードを読み取り、Botと友達に
 
 オウム返しBotの作成は以上で完了です！次はAIのサービスの一つである`Face API`と組み合わせていきます。
 
-> [←目次に戻る](https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson)
+> [←TOPに戻る](../)
