@@ -96,8 +96,12 @@ LINE Botの設定を追記する必要があるので編集していきます。
 実際にLINEで動作確認してみましょう。  
 Botページに表示されているQRコードを読み取り、Botと友達になってから、適当に文字を送ってみましょう。
 
-<a href="https://gyazo.com/00ddda4e792010c515d98825fca042c2"><img src="https://i.gyazo.com/00ddda4e792010c515d98825fca042c2.gif" alt="Image from Gyazo" width="434"/></a>
+<iframe width="414" height="736" src="https://www.youtube.com/embed/BIkEuLy2tAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-オウム返しBotの作成は以上で完了です！次はAIのサービスの一つである`Face API`と組み合わせていきます。
+オウム返しBotの作成は以上で完了です！  
+次はAIのサービスの一つである`Face API`と組み合わせていきます。
+
+> ！！注意！！  
+> 後で使うので、Gitpodのタブは**閉じない**ようにしましょう！
 
 [←TOPに戻る](../)

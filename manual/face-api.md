@@ -23,13 +23,13 @@
 - 200以上のサービスが提供されている
 - AI・機械学習系のサービスも充実している
 
-今日はAzureのサービスの内、AIを提供しているサービスである`Cognitive Service - Face`を利用します。
+今日はAzureのサービスの内、AIを提供しているサービスである`Cognitive Service`の`Face`を利用します。
 
-## Cognitive Service - Faceの紹介
+## Face APIの紹介
 
 > 公式ドキュメントはこちら：https://azure.microsoft.com/ja-jp/services/cognitive-services/face/
 
-`Cognitive Service - Face`を利用すると、3つの機能を使うことができます。
+`Face API`には大きく分けて3つの機能が提供されています。
 
 - 顔検出
 - 顔認証
@@ -56,13 +56,13 @@
 
 > 怒り、軽蔑、嫌悪感、恐怖、喜び、中立、悲しみ、驚きなど、認識された表情を検出します。
 
-`Cognitive Service - Face`は、複雑なプログラミングをせずに利用できる**API**として提供されています。
+`Face API`は、複雑なプログラミングをせずに利用できる**API**として提供されています。
 
 ## APIとは？
 
 APIとは、`Application Programming Interface`の略です。
 
-APIが提供されているサービスでは、複雑なプログラミングを行うことなく機能を利用できるため、簡単に自身が開発しているプロダクトに組み込むことができます。
+APIの中でも、Web APIが提供されているサービスでは、複雑なプログラミングを行うことなく、HTTPで機能を利用できるため、自身が開発しているプロダクトに簡単に組み込むことができます。
 
 // TODO イメージ
 
@@ -95,10 +95,12 @@ APIが提供されているサービスでは、複雑なプログラミング�
 > このセクションの全体の流れ  
 > TODO
 
-Azureポータルを開きます。  
-https://portal.azure.com/
+
 
 ### Azureポータルにログインする
+
+Azureポータルを開きます。  
+https://portal.azure.com/
 
 ログインし、以下のようなページが表示されればOKです。
 
@@ -152,6 +154,50 @@ Face APIのリソースを作成します。
 
 ## Face APIとLINE Botを組み合わせよう
 
+### コードにFace APIのキー・エンドポイントを記入する
 
+Gitpodのタブを開きます。
+
+> Gitpodを一度閉じてしまった人は、[ここ](https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson)をクリックして再度開きましょう。  
+> その際、LINE Developerコンソールから、`チャネルシークレット`と`チャネルアクセストークン`を再びコピーしてくる必要があります。
+
+24行目あたりにある、`faceKey`・`faceEndPoint`にそれぞれ、先程コピーした`キー1`・`エンドポイント`をペーストします。
+
+<a href="https://gyazo.com/80f298f713ff96a00375a670ce6e6b5d"><img src="https://i.gyazo.com/80f298f713ff96a00375a670ce6e6b5d.png" alt="Image from Gyazo" width="1532"/></a>
+
+こんな感じになればOKです。
+
+> `キー1`・`エンドポイント`の内容は人によって変わるので注意。
+
+<a href="https://gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb"><img src="https://i.gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb.png" alt="Image from Gyazo" width="1089.152"/></a>
+
+### Expressを再起動する
+
+ターミナルをクリックし、`Ctrl + C`を押して、Expressを一度停止させます。
+
+<a href="https://gyazo.com/8357e06087a090b6d7eba35bc7b52b09"><img src="https://i.gyazo.com/8357e06087a090b6d7eba35bc7b52b09.png" alt="Image from Gyazo" width="1089.152"/></a>
+
+`^C`が出ていれば停止できています。
+
+<a href="https://gyazo.com/2b7b172dea88a6999a4e8600ca427ea4"><img src="https://i.gyazo.com/2b7b172dea88a6999a4e8600ca427ea4.png" alt="Image from Gyazo" width="1089.152"/></a>
+
+ターミナルに`node index.js`と入力して、`Enter`を押します。
+
+<a href="https://gyazo.com/0cd665b2856038452f724002cad15e24"><img src="https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png" alt="Image from Gyazo" width="1000"/></a>
+
+Expressが起動していることを確認します。
+
+<a href="https://gyazo.com/b50a862bf882e03edcf0fe5501d1e676"><img src="https://i.gyazo.com/b50a862bf882e03edcf0fe5501d1e676.png" alt="Image from Gyazo" width="1089.152"/></a>
+
+以上で、感情分析Botの設定は終わりです。
+
+## 感情分析Botを動かしてみよう
+
+Botに人の顔が写っている写真を送信してみましょう。  
+感情が分析されて返ってくるはずです。
+
+<iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+以上で感情分析Botの作成はおしまいです！
 
 [←TOPに戻る](../)
