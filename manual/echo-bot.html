@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>オウム返しBotを作ろう · HonKit</title>
+        <title>オウム返しBotを作ろう · 【ハンズオン資料】写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 3.6.17">
@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-treeview/style.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
@@ -93,7 +97,7 @@
                 <a href="../">
             
                     
-                    ハンズオン資料 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう LINE Bot + Face API ~プロトアウト授業体験会~
+                    TOP
             
                 </a>
             
@@ -185,7 +189,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="オウム返しbotを作ろう">オウム返しBotを作ろう</h1>
+                                <div class="treeview__container"><ul>
+<li><div><a href="#オウム返しbotを作ろう">オウム返しBotを作ろう</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#この章のゴール">この章のゴール</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#完成イメージ">完成イメージ</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#ここからは話を聞くタイム">ここからは話を聞くタイム</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#line-botとは？">LINE Botとは？</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#ここからは手を動かすタイム">ここからは手を動かすタイム</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#チャンネルを作ろう">チャンネルを作ろう</a><i></i></div></li>
+<li><div><a href="#gitpodを開こう">Gitpodを開こう</a><i></i></div></li>
+<li><div><a href="#オウム返しbotを動かしてみよう">オウム返しBotを動かしてみよう</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="オウム返しbotを作ろう">オウム返しBotを作ろう</h1>
 <h2 id="この章のゴール">この章のゴール</h2>
 <ul>
 <li>送信した文字をそのまま返す<code>オウム返しBot</code>を作成する</li>
@@ -193,17 +218,15 @@
 <h3 id="完成イメージ">完成イメージ</h3>
 <iframe width="414" height="736" src="https://www.youtube.com/embed/BIkEuLy2tAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h2 id="ここからは話を聞くタイムです">ここからは話を聞くタイムです</h2>
-
+<h2 id="ここからは話を聞くタイム">ここからは話を聞くタイム</h2>
 <p><a href="https://gyazo.com/6529781dd996c64228080c383aa4a325" target="_blank"><img src="https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png" alt="Image from Gyazo" width="500"></a></p>
-<h2 id="line-botとは？">LINE Botとは？</h2>
+<h3 id="line-botとは？">LINE Botとは？</h3>
 <p>// TODO</p>
-<h2 id="ここからは手を動かすタイムです">ここからは手を動かすタイムです</h2>
-
+<h2 id="ここからは手を動かすタイム">ここからは手を動かすタイム</h2>
 <p><a href="https://gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74" target="_blank"><img src="https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png" alt="Image from Gyazo" width="500"></a></p>
-<h2 id="チャンネルを作ろう">チャンネルを作ろう</h2>
+<h3 id="チャンネルを作ろう">チャンネルを作ろう</h3>
 <p>// TODO  LINE Developersでチャンネルを作るまでの手順を書く</p>
-<h2 id="gitpodを開こう">Gitpodを開こう</h2>
+<h3 id="gitpodを開こう">Gitpodを開こう</h3>
 <p>Gitpodは、オンライン利用できるエディタです。</p>
 <p>以下のURLを開きましょう。<br><a href="https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson" target="_blank">https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson</a></p>
 <p>GitHubアカウントでログインします。</p>
@@ -212,7 +235,7 @@
 <p>このような画面が表示されます。</p>
 <p><a href="https://gyazo.com/d8ef262a41e320c525d51762be79a8b6" target="_blank"><img src="https://i.gyazo.com/d8ef262a41e320c525d51762be79a8b6.png" alt="Image from Gyazo" width="1000"></a></p>
 <p>Gitpodの準備はこれでOKです。<br>オウム返しBotを動かす準備を進めていきましょう！</p>
-<h2 id="オウム返しbotを動かしてみよう">オウム返しBotを動かしてみよう</h2>
+<h3 id="オウム返しbotを動かしてみよう">オウム返しBotを動かしてみよう</h3>
 <p>Gitpod上でコードを編集しましょう。<br>LINE Botの設定を追記する必要があるので編集していきます。</p>
 <p>サイドバーから<code>index.js</code>を開き、<code>チャネルシークレット</code>・<code>チャネルアクセストークン</code>の設定箇所までスクロールします。</p>
 <p><a href="https://gyazo.com/54036709b6af66f45ac166a2862b4345" target="_blank"><img src="https://i.gyazo.com/54036709b6af66f45ac166a2862b4345.png" alt="Image from Gyazo" width="1000"></a></p>
@@ -271,7 +294,7 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: ハンズオン資料 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう LINE Bot + Face API ~プロトアウト授業体験会~">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: TOP">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -287,7 +310,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"next":{"title":"AIと組み合わせよう","level":"1.3","depth":1,"path":"manual/face-api.md","ref":"manual/face-api.md","articles":[]},"previous":{"title":"ハンズオン資料 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう LINE Bot + Face API ~プロトアウト授業体験会~","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/echo-bot.md","mtime":"2021-03-05T18:38:53.169Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T18:39:02.349Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"next":{"title":"AIと組み合わせよう","level":"1.3","depth":1,"path":"manual/face-api.md","ref":"manual/face-api.md","articles":[]},"previous":{"title":"TOP","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-treeview"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"2","minHeaderDeep":"2","collapsed":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"【ハンズオン資料】写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~","gitbook":"*","description":"ハンズオン - 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~"},"file":{"path":"manual/echo-bot.md","mtime":"2021-03-05T18:57:43.400Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T18:57:52.298Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
