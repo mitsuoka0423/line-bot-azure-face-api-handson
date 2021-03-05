@@ -6,7 +6,7 @@
 
 ### 完成イメージ
 
-<a href="https://gyazo.com/00ddda4e792010c515d98825fca042c2"><img src="https://i.gyazo.com/00ddda4e792010c515d98825fca042c2.gif" alt="Image from Gyazo" width="434"/></a>
+<iframe width="414" height="736" src="https://www.youtube.com/embed/BIkEuLy2tAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h2>ここからは話を聞くタイムです</h2>
 
