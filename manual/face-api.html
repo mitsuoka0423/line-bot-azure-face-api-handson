@@ -93,7 +93,7 @@
                 <a href="../">
             
                     
-                    TOP
+                    ハンズオン資料 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう LINE Bot + Face API ~プロトアウト授業体験会~
             
                 </a>
             
@@ -186,25 +186,81 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="aiと組み合わせよう">AIと組み合わせよう</h1>
-<blockquote>
-<p>この章でできるもの</p>
+<h2 id="この章のゴール">この章のゴール</h2>
 <ul>
-<li>感情分析AIを使ったLINE Bot</li>
+<li>LINE BotとAzure Face APIを組み合わせて、感情分析Botを作成する</li>
 </ul>
-</blockquote>
 <h3 id="完成イメージ">完成イメージ</h3>
 <p>// TODO</p>
 <h2 id="ここからは話を聞くタイムです">ここからは話を聞くタイムです</h2>
 
 <p><a href="https://gyazo.com/6529781dd996c64228080c383aa4a325" target="_blank"><img src="https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png" alt="Image from Gyazo" width="500"></a></p>
 <h2 id="microsoft-azure-とは？">Microsoft Azure とは？</h2>
+<blockquote>
+<p>公式サイトはこちら：<a href="https://azure.microsoft.com/ja-jp/" target="_blank">https://azure.microsoft.com/ja-jp/</a></p>
+</blockquote>
 <p>ざっくり説明します。</p>
 <ul>
 <li>Microsoftが提供しているクラウドサービスのこと</li>
 <li>200以上のサービスが提供されている</li>
 <li>AI・機械学習系のサービスも充実している</li>
 </ul>
-<p>公式サイトはこちら：<a href="https://azure.microsoft.com/ja-jp/" target="_blank">https://azure.microsoft.com/ja-jp/</a></p>
+<p>今日はAzureのサービスの内、AIを提供しているサービスである<code>Cognitive Service - Face</code>を利用します。</p>
+<h2 id="cognitive-service---faceの紹介">Cognitive Service - Faceの紹介</h2>
+<blockquote>
+<p>公式ドキュメントはこちら：<a href="https://azure.microsoft.com/ja-jp/services/cognitive-services/face/" target="_blank">https://azure.microsoft.com/ja-jp/services/cognitive-services/face/</a></p>
+</blockquote>
+<p><code>Cognitive Service - Face</code>を利用すると、3つの機能を使うことができます。</p>
+<ul>
+<li>顔検出</li>
+<li>顔認証</li>
+<li>感情認識</li>
+</ul>
+<p>それぞれについて簡単に説明します。</p>
+<h3 id="顔検出">顔検出</h3>
+<p><a href="https://gyazo.com/96883a0d6cec3835d1dd226f2787122f" target="_blank"><img src="https://i.gyazo.com/96883a0d6cec3835d1dd226f2787122f.png" alt="Image from Gyazo" width="1308"></a></p>
+<blockquote>
+<p>1人以上の人間の顔と各種の属性(年齢、感情、ポーズ、笑顔、顔ひげなど)を検出できます。<br>また、画像内の顔ごとに27個の特徴点が抽出されます。</p>
+</blockquote>
+<h3 id="顔認証">顔認証</h3>
+<p><a href="https://gyazo.com/b95cfdb0061bed0eb926aa9340247015" target="_blank"><img src="https://i.gyazo.com/b95cfdb0061bed0eb926aa9340247015.png" alt="Image from Gyazo" width="1081"></a></p>
+<blockquote>
+<p>2つの顔が同一人物のものである可能性を検証し、信頼度スコアを取得します。</p>
+</blockquote>
+<h3 id="感情認識">感情認識</h3>
+<p><a href="https://gyazo.com/94e6036245e1a74871c1720903da2455" target="_blank"><img src="https://i.gyazo.com/94e6036245e1a74871c1720903da2455.png" alt="Image from Gyazo" width="1286"></a></p>
+<blockquote>
+<p>怒り、軽蔑、嫌悪感、恐怖、喜び、中立、悲しみ、驚きなど、認識された表情を検出します。</p>
+</blockquote>
+<p><code>Cognitive Service - Face</code>は、複雑なプログラミングをせずに利用できる<strong>API</strong>として提供されています。</p>
+<h2 id="apiとは？">APIとは？</h2>
+<p>APIとは、<code>Application Programming Interface</code>の略です。</p>
+<p>APIが提供されているサービスでは、複雑なプログラミングを行うことなく機能を利用できるため、簡単に自身が開発しているプロダクトに組み込むことができます。</p>
+<p>// TODO イメージ</p>
+<p>現在、色々なサービスがAPIを提供しています。<br>例えば、</p>
+<ul>
+<li>Yahoo!天気 (<a href="https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/weather.html" target="_blank">https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/weather.html</a>)</li>
+<li>YouTube (<a href="https://developers.google.cn/youtube/iframe_api_reference?hl=ja" target="_blank">https://developers.google.cn/youtube/iframe_api_reference?hl=ja</a>)</li>
+<li>Twitter (<a href="https://developer.twitter.com/ja/docs" target="_blank">https://developer.twitter.com/ja/docs</a>)</li>
+<li>Facebook (<a href="https://developers.facebook.com/docs/apis-and-sdks?locale=ja_JP" target="_blank">https://developers.facebook.com/docs/apis-and-sdks?locale=ja_JP</a>)</li>
+</ul>
+<p>などなど。</p>
+<blockquote>
+<p>すぐに使えるAPIまとめ：<a href="https://protoout.studio/posts/public-apis-api-get" target="_blank">https://protoout.studio/posts/public-apis-api-get</a></p>
+</blockquote>
+<p>では、無料で利用できるAPIが100個以上紹介されています。</p>
+<h2 id="ここまでのまとめ">ここまでのまとめ</h2>
+<ul>
+<li>Azureとは、Microsoftが提供しているクラウドサービスのこと。</li>
+<li>AzureのAI・機械学習系のサービスの1つとして、<strong>感情分析AI</strong>が提供されている。</li>
+<li>感情分析AIは<strong>API</strong>として提供されているので、簡単にプロダクトに組み込める。</li>
+</ul>
+<h2 id="ここからは手を動かすタイムです">ここからは手を動かすタイムです</h2>
+
+<p><a href="https://gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74" target="_blank"><img src="https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png" alt="Image from Gyazo" width="500"></a></p>
+<h2 id="face-apiを使ってみよう">Face APIを使ってみよう</h2>
+<h2 id="face-apiとline-botを組み合わせよう">Face APIとLINE Botを組み合わせよう</h2>
+<p><a href="..">←TOPに戻る</a></p>
 
                                 
                                 </section>
@@ -248,7 +304,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AIと組み合わせよう","level":"1.3","depth":1,"next":{"title":"(応用)感情に合わせてスタンプを返そう","level":"1.4","depth":1,"path":"manual/appliaction.md","ref":"manual/appliaction.md","articles":[]},"previous":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"path":"manual/echo-bot.md","ref":"manual/echo-bot.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/face-api.md","mtime":"2021-03-05T12:38:26.513Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T12:42:07.768Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AIと組み合わせよう","level":"1.3","depth":1,"next":{"title":"(応用)感情に合わせてスタンプを返そう","level":"1.4","depth":1,"path":"manual/appliaction.md","ref":"manual/appliaction.md","articles":[]},"previous":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"path":"manual/echo-bot.md","ref":"manual/echo-bot.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/face-api.md","mtime":"2021-03-05T14:01:45.984Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T14:06:03.040Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
