@@ -206,12 +206,12 @@
 <li>200以上のサービスが提供されている</li>
 <li>AI・機械学習系のサービスも充実している</li>
 </ul>
-<p>今日はAzureのサービスの内、AIを提供しているサービスである<code>Cognitive Service - Face</code>を利用します。</p>
-<h2 id="cognitive-service---faceの紹介">Cognitive Service - Faceの紹介</h2>
+<p>今日はAzureのサービスの内、AIを提供しているサービスである<code>Cognitive Service</code>の<code>Face</code>を利用します。</p>
+<h2 id="face-apiの紹介">Face APIの紹介</h2>
 <blockquote>
 <p>公式ドキュメントはこちら：<a href="https://azure.microsoft.com/ja-jp/services/cognitive-services/face/" target="_blank">https://azure.microsoft.com/ja-jp/services/cognitive-services/face/</a></p>
 </blockquote>
-<p><code>Cognitive Service - Face</code>を利用すると、3つの機能を使うことができます。</p>
+<p><code>Face API</code>には大きく分けて3つの機能が提供されています。</p>
 <ul>
 <li>顔検出</li>
 <li>顔認証</li>
@@ -233,10 +233,10 @@
 <blockquote>
 <p>怒り、軽蔑、嫌悪感、恐怖、喜び、中立、悲しみ、驚きなど、認識された表情を検出します。</p>
 </blockquote>
-<p><code>Cognitive Service - Face</code>は、複雑なプログラミングをせずに利用できる<strong>API</strong>として提供されています。</p>
+<p><code>Face API</code>は、複雑なプログラミングをせずに利用できる<strong>API</strong>として提供されています。</p>
 <h2 id="apiとは？">APIとは？</h2>
 <p>APIとは、<code>Application Programming Interface</code>の略です。</p>
-<p>APIが提供されているサービスでは、複雑なプログラミングを行うことなく機能を利用できるため、簡単に自身が開発しているプロダクトに組み込むことができます。</p>
+<p>APIの中でも、Web APIが提供されているサービスでは、複雑なプログラミングを行うことなく、HTTPで機能を利用できるため、自身が開発しているプロダクトに簡単に組み込むことができます。</p>
 <p>// TODO イメージ</p>
 <p>現在、色々なサービスがAPIを提供しています。<br>例えば、</p>
 <ul>
@@ -263,8 +263,8 @@
 <blockquote>
 <p>このセクションの全体の流れ<br>TODO</p>
 </blockquote>
-<p>Azureポータルを開きます。<br><a href="https://portal.azure.com/" target="_blank">https://portal.azure.com/</a></p>
 <h3 id="azureポータルにログインする">Azureポータルにログインする</h3>
+<p>Azureポータルを開きます。<br><a href="https://portal.azure.com/" target="_blank">https://portal.azure.com/</a></p>
 <p>ログインし、以下のようなページが表示されればOKです。</p>
 <p><a href="https://gyazo.com/9c41bc6e713573818c8a2086a6e204be" target="_blank"><img src="https://i.gyazo.com/9c41bc6e713573818c8a2086a6e204be.png" alt="Image from Gyazo" width="1024"></a></p>
 <p>Face APIのリソースを作成します。</p>
@@ -317,6 +317,33 @@
 <p><code>キー1</code>と<code>エンドポイント</code>をコピーします。</p>
 <p><a href="https://gyazo.com/199c26da328160a466584e4f420b3f69" target="_blank"><img src="https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png" alt="Image from Gyazo" width="1034"></a></p>
 <h2 id="face-apiとline-botを組み合わせよう">Face APIとLINE Botを組み合わせよう</h2>
+<h3 id="コードにface-apiのキー・エンドポイントを記入する">コードにFace APIのキー・エンドポイントを記入する</h3>
+<p>Gitpodのタブを開きます。</p>
+<blockquote>
+<p>Gitpodを一度閉じてしまった人は、<a href="https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson" target="_blank">ここ</a>をクリックして再度開きましょう。<br>その際、LINE Developerコンソールから、<code>チャネルシークレット</code>と<code>チャネルアクセストークン</code>を再びコピーしてくる必要があります。</p>
+</blockquote>
+<p>24行目あたりにある、<code>faceKey</code>・<code>faceEndPoint</code>にそれぞれ、先程コピーした<code>キー1</code>・<code>エンドポイント</code>をペーストします。</p>
+<p><a href="https://gyazo.com/80f298f713ff96a00375a670ce6e6b5d" target="_blank"><img src="https://i.gyazo.com/80f298f713ff96a00375a670ce6e6b5d.png" alt="Image from Gyazo" width="1532"></a></p>
+<p>こんな感じになればOKです。</p>
+<blockquote>
+<p><code>キー1</code>・<code>エンドポイント</code>の内容は人によって変わるので注意。</p>
+</blockquote>
+<p><a href="https://gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb" target="_blank"><img src="https://i.gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb.png" alt="Image from Gyazo" width="1089.152"></a></p>
+<h3 id="expressを再起動する">Expressを再起動する</h3>
+<p>ターミナルをクリックし、<code>Ctrl + C</code>を押して、Expressを一度停止させます。</p>
+<p><a href="https://gyazo.com/8357e06087a090b6d7eba35bc7b52b09" target="_blank"><img src="https://i.gyazo.com/8357e06087a090b6d7eba35bc7b52b09.png" alt="Image from Gyazo" width="1089.152"></a></p>
+<p><code>^C</code>が出ていれば停止できています。</p>
+<p><a href="https://gyazo.com/2b7b172dea88a6999a4e8600ca427ea4" target="_blank"><img src="https://i.gyazo.com/2b7b172dea88a6999a4e8600ca427ea4.png" alt="Image from Gyazo" width="1089.152"></a></p>
+<p>ターミナルに<code>node index.js</code>と入力して、<code>Enter</code>を押します。</p>
+<p><a href="https://gyazo.com/0cd665b2856038452f724002cad15e24" target="_blank"><img src="https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png" alt="Image from Gyazo" width="1000"></a></p>
+<p>Expressが起動していることを確認します。</p>
+<p><a href="https://gyazo.com/b50a862bf882e03edcf0fe5501d1e676" target="_blank"><img src="https://i.gyazo.com/b50a862bf882e03edcf0fe5501d1e676.png" alt="Image from Gyazo" width="1089.152"></a></p>
+<p>以上で、感情分析Botの設定は終わりです。</p>
+<h2 id="感情分析botを動かしてみよう">感情分析Botを動かしてみよう</h2>
+<p>Botに人の顔が写っている写真を送信してみましょう。<br>感情が分析されて返ってくるはずです。</p>
+<iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>以上で感情分析Botの作成はおしまいです！</p>
 <p><a href="..">←TOPに戻る</a></p>
 
                                 
@@ -361,7 +388,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AIと組み合わせよう","level":"1.3","depth":1,"next":{"title":"(応用)感情に合わせてスタンプを返そう","level":"1.4","depth":1,"path":"manual/appliaction.md","ref":"manual/appliaction.md","articles":[]},"previous":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"path":"manual/echo-bot.md","ref":"manual/echo-bot.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/face-api.md","mtime":"2021-03-05T18:03:20.380Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T18:03:27.545Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AIと組み合わせよう","level":"1.3","depth":1,"next":{"title":"(応用)感情に合わせてスタンプを返そう","level":"1.4","depth":1,"path":"manual/appliaction.md","ref":"manual/appliaction.md","articles":[]},"previous":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"path":"manual/echo-bot.md","ref":"manual/echo-bot.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/face-api.md","mtime":"2021-03-05T18:38:53.169Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T18:39:02.349Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
