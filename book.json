@@ -1,0 +1,14 @@
+{
+  "title": "【ハンズオン資料】写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~",
+  "description": "ハンズオン - 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~",
+  "plugins": [
+      "page-treeview"
+  ],
+  "pluginsConfig": {
+      "page-treeview": {
+          "copyright": "",
+          "minHeaderCount": "2",
+          "minHeaderDeep": "2"
+      }
+  }
+}

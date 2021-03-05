@@ -9,11 +9,11 @@
 
 <iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h2>ここからは話を聞くタイムです</h2>
+## ここからは話を聞くタイム
 
 <a href="https://gyazo.com/6529781dd996c64228080c383aa4a325"><img src="https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png" alt="Image from Gyazo" width="500"/></a>
 
-## Microsoft Azure とは？
+### Microsoft Azure とは？
 
 > 公式サイトはこちら：https://azure.microsoft.com/ja-jp/
 
@@ -25,7 +25,7 @@
 
 今日はAzureのサービスの内、AIを提供しているサービスである`Cognitive Service`の`Face`を利用します。
 
-## Face APIの紹介
+### Face APIの紹介
 
 > 公式ドキュメントはこちら：https://azure.microsoft.com/ja-jp/services/cognitive-services/face/
 
@@ -37,20 +37,20 @@
 
 それぞれについて簡単に説明します。
 
-### 顔検出
+#### 顔検出
 
 <a href="https://gyazo.com/96883a0d6cec3835d1dd226f2787122f"><img src="https://i.gyazo.com/96883a0d6cec3835d1dd226f2787122f.png" alt="Image from Gyazo" width="1308"/></a>
 
 > 1人以上の人間の顔と各種の属性(年齢、感情、ポーズ、笑顔、顔ひげなど)を検出できます。  
 > また、画像内の顔ごとに27個の特徴点が抽出されます。
 
-### 顔認証
+#### 顔認証
 
 <a href="https://gyazo.com/b95cfdb0061bed0eb926aa9340247015"><img src="https://i.gyazo.com/b95cfdb0061bed0eb926aa9340247015.png" alt="Image from Gyazo" width="1081"/></a>
 
 > 2つの顔が同一人物のものである可能性を検証し、信頼度スコアを取得します。
 
-### 感情認識
+#### 感情認識
 
 <a href="https://gyazo.com/94e6036245e1a74871c1720903da2455"><img src="https://i.gyazo.com/94e6036245e1a74871c1720903da2455.png" alt="Image from Gyazo" width="1286"/></a>
 
@@ -58,7 +58,7 @@
 
 `Face API`は、複雑なプログラミングをせずに利用できる**API**として提供されています。
 
-## APIとは？
+### APIとは？
 
 APIとは、`Application Programming Interface`の略です。
 
@@ -80,24 +80,19 @@ APIの中でも、Web APIが提供されているサービスでは、複雑な�
 
 では、無料で利用できるAPIが100個以上紹介されています。
 
-## ここまでのまとめ
+### ここまでのまとめ
 
 - Azureとは、Microsoftが提供しているクラウドサービスのこと。
 - AzureのAI・機械学習系のサービスの1つとして、**感情分析AI**が提供されている。
 - 感情分析AIは**API**として提供されているので、簡単にプロダクトに組み込める。
 
-<h2>ここからは手を動かすタイムです</h2>
+## ここからは手を動かすタイム
 
 <a href="https://gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74"><img src="https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png" alt="Image from Gyazo" width="500"/></a>
 
-## Face APIを使ってみよう
+### Face APIを使ってみよう
 
-> このセクションの全体の流れ  
-> TODO
-
-
-
-### Azureポータルにログインする
+#### Azureポータルにログインする
 
 Azureポータルを開きます。  
 https://portal.azure.com/
@@ -112,7 +107,7 @@ Face APIのリソースを作成します。
 
 <a href="https://gyazo.com/5201c4d4037788c001d79f1cdfef8725"><img src="https://i.gyazo.com/5201c4d4037788c001d79f1cdfef8725.png" alt="Image from Gyazo" width="1024"/></a>
 
-### リソースグループを作成する
+#### リソースグループを作成する
 
 > 既にリソースグループを作成している方は作成不要です
 
@@ -126,7 +121,7 @@ Face APIのリソースを作成します。
 
 <a href="https://gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c"><img src="https://i.gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c.png" alt="Image from Gyazo" width="1024"/></a>
 
-### Face APIのリソースを作成する
+#### Face APIのリソースを作成する
 
 残りの項目を埋めて、`確認および作成`をクリックします。
 
@@ -152,9 +147,9 @@ Face APIのリソースを作成します。
 
 <a href="https://gyazo.com/199c26da328160a466584e4f420b3f69"><img src="https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png" alt="Image from Gyazo" width="1034"/></a>
 
-## Face APIとLINE Botを組み合わせよう
+### Face APIとLINE Botを組み合わせよう
 
-### コードにFace APIのキー・エンドポイントを記入する
+#### コードにFace APIのキー・エンドポイントを記入する
 
 Gitpodのタブを開きます。
 
@@ -171,7 +166,7 @@ Gitpodのタブを開きます。
 
 <a href="https://gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb"><img src="https://i.gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb.png" alt="Image from Gyazo" width="1089.152"/></a>
 
-### Expressを再起動する
+#### Expressを再起動する
 
 ターミナルをクリックし、`Ctrl + C`を押して、Expressを一度停止させます。
 
@@ -191,7 +186,7 @@ Expressが起動していることを確認します。
 
 以上で、感情分析Botの設定は終わりです。
 
-## 感情分析Botを動かしてみよう
+### 感情分析Botを動かしてみよう
 
 Botに人の顔が写っている写真を送信してみましょう。  
 感情が分析されて返ってくるはずです。

@@ -8,23 +8,23 @@
 
 <iframe width="414" height="736" src="https://www.youtube.com/embed/BIkEuLy2tAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h2>ここからは話を聞くタイムです</h2>
+## ここからは話を聞くタイム
 
 <a href="https://gyazo.com/6529781dd996c64228080c383aa4a325"><img src="https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png" alt="Image from Gyazo" width="500"/></a>
 
-## LINE Botとは？
+### LINE Botとは？
 
 // TODO
 
-<h2>ここからは手を動かすタイムです</h2>
+## ここからは手を動かすタイム
 
 <a href="https://gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74"><img src="https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png" alt="Image from Gyazo" width="500"/></a>
 
-## チャンネルを作ろう
+### チャンネルを作ろう
 
 // TODO  LINE Developersでチャンネルを作るまでの手順を書く
 
-## Gitpodを開こう
+### Gitpodを開こう
 
 Gitpodは、オンライン利用できるエディタです。
 
@@ -44,7 +44,7 @@ GitHubアカウントでログインします。
 Gitpodの準備はこれでOKです。  
 オウム返しBotを動かす準備を進めていきましょう！
 
-## オウム返しBotを動かしてみよう
+### オウム返しBotを動かしてみよう
 
 Gitpod上でコードを編集しましょう。  
 LINE Botの設定を追記する必要があるので編集していきます。
