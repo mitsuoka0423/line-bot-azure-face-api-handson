@@ -58,6 +58,7 @@ async function handleEvent(event) {
         text += '悲しみ：' + result[0].faceAttributes.emotion.sadness + '\n';
         text += '驚き　：' + result[0].faceAttributes.emotion.surprise + '\n';
         text += '恐れ　：' + result[0].faceAttributes.emotion.fear;
+        // memo: 返す文字を編集する場合はここを編集しましょう
       }
 
       return lineClient.replyMessage(event.replyToken, {
@@ -76,9 +77,12 @@ async function handleEvent(event) {
 
   // 「テキストメッセージ」であれば、受信したテキストをそのまま返事します
   if (event.message.type === 'text') {
+    let text = event.message.text;  // event.message.textには、LINEアプリで入力した文字が入っています
+    // text += event.message.text; // memo: オウム2倍返しする場合はここのコメントを外しましょう
+
     return lineClient.replyMessage(event.replyToken, {
       type: 'text',
-      text: event.message.text, // ← ここに入れた言葉が実際に返信されます
+      text: text,
     });
   }
 }
