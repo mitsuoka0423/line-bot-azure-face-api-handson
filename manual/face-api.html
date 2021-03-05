@@ -259,6 +259,62 @@
 
 <p><a href="https://gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74" target="_blank"><img src="https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png" alt="Image from Gyazo" width="500"></a></p>
 <h2 id="face-apiを使ってみよう">Face APIを使ってみよう</h2>
+<blockquote>
+<p>このセクションの全体の流れ<br>TODO</p>
+</blockquote>
+<p>Azureポータルを開きます。<br><a href="https://portal.azure.com/" target="_blank">https://portal.azure.com/</a></p>
+<h3 id="azureポータルにログインする">Azureポータルにログインする</h3>
+<p>ログインし、以下のようなページが表示されればOKです。</p>
+<p><a href="https://gyazo.com/9c41bc6e713573818c8a2086a6e204be" target="_blank"><img src="https://i.gyazo.com/9c41bc6e713573818c8a2086a6e204be.png" alt="Image from Gyazo" width="1024"></a></p>
+<p>Face APIのリソースを作成します。</p>
+<p><a href="https://gyazo.com/506f1466fe43354518e43cc5a3bd24fa" target="_blank"><img src="https://i.gyazo.com/506f1466fe43354518e43cc5a3bd24fa.png" alt="Image from Gyazo" width="1024"></a></p>
+<p><a href="https://gyazo.com/5201c4d4037788c001d79f1cdfef8725" target="_blank"><img src="https://i.gyazo.com/5201c4d4037788c001d79f1cdfef8725.png" alt="Image from Gyazo" width="1024"></a></p>
+<h3 id="リソースグループを作成する">リソースグループを作成する</h3>
+<blockquote>
+<p>既にリソースグループを作成している方は作成不要です</p>
+</blockquote>
+<p>リソースグループの<code>新規作成</code>をクリックし、リソースグループ名<code>handson-20210306</code>を入力します。</p>
+<p><a href="https://gyazo.com/cd8c999ccca54a34eba230c44e926a48" target="_blank"><img src="https://i.gyazo.com/cd8c999ccca54a34eba230c44e926a48.png" alt="Image from Gyazo" width="1024"></a></p>
+<p><a href="https://gyazo.com/199465814a832fa28eb3c97955c9eb48" target="_blank"><img src="https://i.gyazo.com/199465814a832fa28eb3c97955c9eb48.png" alt="Image from Gyazo" width="1024"></a></p>
+<p>リソースグループが作成されました。</p>
+<p><a href="https://gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c" target="_blank"><img src="https://i.gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c.png" alt="Image from Gyazo" width="1024"></a></p>
+<h3 id="face-apiのリソースを作成する">Face APIのリソースを作成する</h3>
+<p>残りの項目を埋めて、<code>確認および作成</code>をクリックします。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>値</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>リージョン</td>
+<td>東日本</td>
+<td>一番近い<code>東日本</code>を選択します。</td>
+</tr>
+<tr>
+<td>名前</td>
+<td><code>handson-{名前}-20210306</code></td>
+<td>ユニークな名前をつける必要があります。今日は名字を入れましょう。</td>
+</tr>
+<tr>
+<td>価格レベル</td>
+<td><code>Free F0</code></td>
+<td>無料のものを選択します</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>同じサブスクリプションでは、無料のFace APIは一つしか作成できません。<br>既に作成済みの場合はそちらを利用しましょう。<br>サブスクリプションを新しく作成してもOKです。</p>
+</blockquote>
+<p><a href="https://gyazo.com/f574fe4dc34f2111a5993def294400e5" target="_blank"><img src="https://i.gyazo.com/f574fe4dc34f2111a5993def294400e5.png" alt="Image from Gyazo" width="1024"></a></p>
+<p><a href="https://gyazo.com/0a4485f141306087f5bc4f6273f04eb8" target="_blank"><img src="https://i.gyazo.com/0a4485f141306087f5bc4f6273f04eb8.png" alt="Image from Gyazo" width="1024"></a></p>
+<p>デプロイが完了したら、<code>リソースに移動</code>をクリックします。</p>
+<p><a href="https://gyazo.com/bd110a382065d4c69ea82a7b41a9dc0c" target="_blank"><img src="https://i.gyazo.com/bd110a382065d4c69ea82a7b41a9dc0c.png" alt="Image from Gyazo" width="1024"></a></p>
+<p><code>キー1</code>と<code>エンドポイント</code>をコピーします。</p>
+<p><a href="https://gyazo.com/199c26da328160a466584e4f420b3f69" target="_blank"><img src="https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png" alt="Image from Gyazo" width="1034"></a></p>
 <h2 id="face-apiとline-botを組み合わせよう">Face APIとLINE Botを組み合わせよう</h2>
 <p><a href="..">←TOPに戻る</a></p>
 
@@ -304,7 +360,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AIと組み合わせよう","level":"1.3","depth":1,"next":{"title":"(応用)感情に合わせてスタンプを返そう","level":"1.4","depth":1,"path":"manual/appliaction.md","ref":"manual/appliaction.md","articles":[]},"previous":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"path":"manual/echo-bot.md","ref":"manual/echo-bot.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/face-api.md","mtime":"2021-03-05T15:25:49.724Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T15:25:59.148Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AIと組み合わせよう","level":"1.3","depth":1,"next":{"title":"(応用)感情に合わせてスタンプを返そう","level":"1.4","depth":1,"path":"manual/appliaction.md","ref":"manual/appliaction.md","articles":[]},"previous":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"path":"manual/echo-bot.md","ref":"manual/echo-bot.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"manual/face-api.md","mtime":"2021-03-05T15:36:25.134Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-05T15:36:32.826Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
