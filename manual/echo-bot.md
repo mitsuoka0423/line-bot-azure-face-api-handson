@@ -37,6 +37,7 @@ APIの中でも、Web APIが提供されているサービスでは、複雑な�
 - YouTube (https://developers.google.cn/youtube/iframe_api_reference?hl=ja)
 - Twitter (https://developer.twitter.com/ja/docs)
 - Facebook (https://developers.facebook.com/docs/apis-and-sdks?locale=ja_JP)
+- Face API (https://azure.microsoft.com/ja-jp/services/cognitive-services/face/)
 
 などなど。
 
