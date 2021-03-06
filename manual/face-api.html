@@ -180,6 +180,7 @@
 <li><div><a href="#この章のゴール">この章のゴール</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
 <ul>
 <li><div><a href="#完成イメージ">完成イメージ</a><i></i></div></li>
+<li><div><a href="#システム概要図">システム概要図</a><i></i></div></li>
 </ul></li>
 <li><div><a href="#ここからは話を聞くタイム">ここからは話を聞くタイム</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
 <ul>
@@ -190,7 +191,6 @@
 <li><div><a href="#顔認証">顔認証</a><i></i></div></li>
 <li><div><a href="#感情認識">感情認識</a><i></i></div></li>
 </ul></li>
-<li><div><a href="#apiとは？">APIとは？</a><i></i></div></li>
 <li><div><a href="#ここまでのまとめ">ここまでのまとめ</a><i></i></div></li>
 </ul></li>
 <li><div><a href="#ここからは手を動かすタイム">ここからは手を動かすタイム</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
@@ -208,6 +208,7 @@
 </ul></li>
 <li><div><a href="#感情分析botを動かしてみよう">感情分析Botを動かしてみよう</a><i></i></div></li>
 </ul></li>
+<li><div><a href="#まとめ">まとめ</a><i></i></div></li>
 </ul></li>
 </ul>
 </div>
@@ -220,6 +221,8 @@
 <h3 id="完成イメージ">完成イメージ</h3>
 <iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<h3 id="システム概要図">システム概要図</h3>
+<p><a href="https://gyazo.com/221d9176e00f46fb5923f0c4944e6274" target="_blank"><img src="https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png" alt="Image from Gyazo" width="987"></a></p>
 <h2 id="ここからは話を聞くタイム">ここからは話を聞くタイム</h2>
 <p><a href="https://gyazo.com/6529781dd996c64228080c383aa4a325" target="_blank"><img src="https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png" alt="Image from Gyazo" width="500"></a></p>
 <h3 id="microsoft-azure-とは？">Microsoft Azure とは？</h3>
@@ -260,21 +263,6 @@
 <p>怒り、軽蔑、嫌悪感、恐怖、喜び、中立、悲しみ、驚きなど、認識された表情を検出します。</p>
 </blockquote>
 <p><code>Face API</code>は、複雑なプログラミングをせずに利用できる<strong>API</strong>として提供されています。</p>
-<h3 id="apiとは？">APIとは？</h3>
-<p>APIとは、<code>Application Programming Interface</code>の略です。</p>
-<p>APIの中でも、Web APIが提供されているサービスでは、複雑なプログラミングを行うことなく、HTTPで機能を利用できるため、自身が開発しているプロダクトに簡単に組み込むことができます。</p>
-<p>現在、色々なサービスがAPIを提供しています。<br>例えば、</p>
-<ul>
-<li>Yahoo!天気 (<a href="https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/weather.html" target="_blank">https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/weather.html</a>)</li>
-<li>YouTube (<a href="https://developers.google.cn/youtube/iframe_api_reference?hl=ja" target="_blank">https://developers.google.cn/youtube/iframe_api_reference?hl=ja</a>)</li>
-<li>Twitter (<a href="https://developer.twitter.com/ja/docs" target="_blank">https://developer.twitter.com/ja/docs</a>)</li>
-<li>Facebook (<a href="https://developers.facebook.com/docs/apis-and-sdks?locale=ja_JP" target="_blank">https://developers.facebook.com/docs/apis-and-sdks?locale=ja_JP</a>)</li>
-</ul>
-<p>などなど。</p>
-<blockquote>
-<p>すぐに使えるAPIまとめ：<a href="https://protoout.studio/posts/public-apis-api-get" target="_blank">https://protoout.studio/posts/public-apis-api-get</a></p>
-</blockquote>
-<p>では、無料で利用できるAPIが100個以上紹介されています。</p>
 <h3 id="ここまでのまとめ">ここまでのまとめ</h3>
 <ul>
 <li>Azureとは、Microsoftが提供しているクラウドサービスのこと。</li>
@@ -337,6 +325,9 @@
 <p><a href="https://gyazo.com/bd110a382065d4c69ea82a7b41a9dc0c" target="_blank"><img src="https://i.gyazo.com/bd110a382065d4c69ea82a7b41a9dc0c.png" alt="Image from Gyazo" width="1024"></a></p>
 <p><code>キー1</code>と<code>エンドポイント</code>をコピーします。</p>
 <p><a href="https://gyazo.com/199c26da328160a466584e4f420b3f69" target="_blank"><img src="https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png" alt="Image from Gyazo" width="1034"></a></p>
+<p>ここまでできたらチャット欄に<code>b</code>を送ってください！</p>
+<p><a href="https://gyazo.com/403c3db5dbed68f05091774a13d08307" target="_blank"><img src="https://i.gyazo.com/403c3db5dbed68f05091774a13d08307.png" alt="Image from Gyazo" width="256"></a></p>
+<p>うまくいかない方はサポートするので、チャット欄で声をかけてください。</p>
 <h3 id="face-apiとline-botを組み合わせよう">Face APIとLINE Botを組み合わせよう</h3>
 <h4 id="コードにface-apiのキー・エンドポイントを記入する">コードにFace APIのキー・エンドポイントを記入する</h4>
 <p>Gitpodのタブを開きます。</p>
@@ -365,6 +356,14 @@
 <iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>以上で感情分析Botの作成はおしまいです！</p>
+<p>ここまでできたらチャット欄に<code>b</code>を送ってください！</p>
+<p><a href="https://gyazo.com/403c3db5dbed68f05091774a13d08307" target="_blank"><img src="https://i.gyazo.com/403c3db5dbed68f05091774a13d08307.png" alt="Image from Gyazo" width="256"></a></p>
+<p>うまくいかない方はサポートするので、チャット欄で声をかけてください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul>
+<li>Azureが提供しているAI・機械学習系サービスであるFace APIを利用するため、Azure上でリソースを作成しました。</li>
+<li>LINE BotとFace API組み合わせて、送った写真の感情分析を行うBotを作成しました。</li>
+</ul>
 <p><a href="..">←TOPに戻る</a></p>
 
                                 
@@ -405,7 +404,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"感情分析AIと組み合わせよう","level":"1.3","depth":1,"previous":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"path":"manual/echo-bot.md","ref":"manual/echo-bot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-treeview"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"2","minHeaderDeep":"2","collapsed":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"【ハンズオン資料】写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~","gitbook":"*","description":"ハンズオン - 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~"},"file":{"path":"manual/face-api.md","mtime":"2021-03-06T05:05:45.319Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-06T05:05:52.965Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"感情分析AIと組み合わせよう","level":"1.3","depth":1,"previous":{"title":"オウム返しBotを作ろう","level":"1.2","depth":1,"path":"manual/echo-bot.md","ref":"manual/echo-bot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-treeview"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"2","minHeaderDeep":"2","collapsed":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"【ハンズオン資料】写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~","gitbook":"*","description":"ハンズオン - 写真を送るとAIが分析してくれるLINE Botを1時間で作ってみよう ~プロトアウト授業体験会~"},"file":{"path":"manual/face-api.md","mtime":"2021-03-06T06:14:22.731Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-06T06:14:34.433Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
