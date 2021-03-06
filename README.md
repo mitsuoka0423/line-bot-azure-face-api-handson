@@ -2,6 +2,8 @@
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson)
 
+<a href="https://gyazo.com/0a566466887e56ed3cefc83c344d7d9e"><img src="https://i.gyazo.com/0a566466887e56ed3cefc83c344d7d9e.gif" alt="Image from Gyazo" width="300px"/></a>
+
 リポジトリは[こちら](https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson)  
 ハンズオン資料は[こちら](https://tmitsuoka0423.github.io/line-bot-azure-face-api-handson/)
 
