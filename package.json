@@ -1,7 +1,7 @@
 {
   "name": "line-bot-azure-face-api-handson",
   "version": "1.0.0",
-  "description": "This is handson material for creating LINE Bot and Face API.",
+  "description": "This is handson materials for creating LINE Bot and Face API.",
   "main": "index.js",
   "scripts": {
     "express": "node index.js",
@@ -12,7 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson.git"
   },
-  "keywords": [],
+  "keywords": [
+    "line",
+    "linebot",
+    "bot",
+    "faceapi",
+    "azure",
+    "handson"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -23,8 +30,7 @@
     "@azure/cognitiveservices-face": "^4.1.0",
     "@azure/ms-rest-azure-js": "^2.1.0",
     "@line/bot-sdk": "^7.2.0",
-    "express": "^4.17.1",
-    "axios": ">=0.21.1"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "eslint": "^7.21.0",
@@ -34,7 +40,6 @@
     "gh-pages": "^3.1.0",
     "gitbook-plugin-page-treeview": "^3.0.3",
     "honkit": "^3.6.17",
-    "prettier": "2.2.1",
-    "remarkable": ">=1.7.0"
+    "prettier": "2.2.1"
   }
 }
