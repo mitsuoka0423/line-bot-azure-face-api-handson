@@ -8,6 +8,10 @@
 
 <iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### システム概要図
+
+<a href="https://gyazo.com/221d9176e00f46fb5923f0c4944e6274"><img src="https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png" alt="Image from Gyazo" width="987"/></a>
+
 ## ここからは話を聞くタイム
 
 <a href="https://gyazo.com/6529781dd996c64228080c383aa4a325"><img src="https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png" alt="Image from Gyazo" width="500"/></a>
@@ -56,26 +60,6 @@
 > 怒り、軽蔑、嫌悪感、恐怖、喜び、中立、悲しみ、驚きなど、認識された表情を検出します。
 
 `Face API`は、複雑なプログラミングをせずに利用できる**API**として提供されています。
-
-### APIとは？
-
-APIとは、`Application Programming Interface`の略です。
-
-APIの中でも、Web APIが提供されているサービスでは、複雑なプログラミングを行うことなく、HTTPで機能を利用できるため、自身が開発しているプロダクトに簡単に組み込むことができます。
-
-現在、色々なサービスがAPIを提供しています。  
-例えば、
-
-- Yahoo!天気 (https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/weather.html)
-- YouTube (https://developers.google.cn/youtube/iframe_api_reference?hl=ja)
-- Twitter (https://developer.twitter.com/ja/docs)
-- Facebook (https://developers.facebook.com/docs/apis-and-sdks?locale=ja_JP)
-
-などなど。
-
-> すぐに使えるAPIまとめ：https://protoout.studio/posts/public-apis-api-get
-
-では、無料で利用できるAPIが100個以上紹介されています。
 
 ### ここまでのまとめ
 
@@ -144,6 +128,12 @@ Face APIのリソースを作成します。
 
 <a href="https://gyazo.com/199c26da328160a466584e4f420b3f69"><img src="https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png" alt="Image from Gyazo" width="1034"/></a>
 
+ここまでできたらチャット欄に`b`を送ってください！
+
+<a href="https://gyazo.com/403c3db5dbed68f05091774a13d08307"><img src="https://i.gyazo.com/403c3db5dbed68f05091774a13d08307.png" alt="Image from Gyazo" width="256"/></a>
+
+うまくいかない方はサポートするので、チャット欄で声をかけてください。
+
 ### Face APIとLINE Botを組み合わせよう
 
 #### コードにFace APIのキー・エンドポイントを記入する
@@ -191,5 +181,16 @@ Botに人の顔が写っている写真を送信してみましょう。
 <iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 以上で感情分析Botの作成はおしまいです！
+
+ここまでできたらチャット欄に`b`を送ってください！
+
+<a href="https://gyazo.com/403c3db5dbed68f05091774a13d08307"><img src="https://i.gyazo.com/403c3db5dbed68f05091774a13d08307.png" alt="Image from Gyazo" width="256"/></a>
+
+うまくいかない方はサポートするので、チャット欄で声をかけてください。
+
+## まとめ
+
+- Azureが提供しているAI・機械学習系サービスであるFace APIを利用するため、Azure上でリソースを作成しました。
+- LINE BotとFace API組み合わせて、送った写真の感情分析を行うBotを作成しました。
 
 [←TOPに戻る](../)

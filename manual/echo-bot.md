@@ -147,6 +147,12 @@ QRコードをLINEアプリで読み取り、友達登録しましょう。
 
 <a href="https://gyazo.com/1e6049acab5fcc1a83f73000949701f6"><img src="https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6.png" alt="Image from Gyazo" width="400"/></a>
 
+ここまでできたらチャット欄に`b`を送ってください！
+
+<a href="https://gyazo.com/403c3db5dbed68f05091774a13d08307"><img src="https://i.gyazo.com/403c3db5dbed68f05091774a13d08307.png" alt="Image from Gyazo" width="256"/></a>
+
+うまくいかない方はサポートするので、チャット欄で教えて下さい。
+
 ### Gitpodを開こう
 
 Gitpodは、オンライン利用できるエディタです。
@@ -222,6 +228,12 @@ Botページに表示されているQRコードを読み取り、Botと友達に
 <iframe width="414" height="736" src="https://www.youtube.com/embed/BIkEuLy2tAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 オウム返しBotの作成は以上で完了です！  
+
+ここまでできたらチャット欄に`b`を送ってください！
+
+<a href="https://gyazo.com/403c3db5dbed68f05091774a13d08307"><img src="https://i.gyazo.com/403c3db5dbed68f05091774a13d08307.png" alt="Image from Gyazo" width="256"/></a>
+
+うまくいかない方はサポートするので、チャット欄で声をかけてください。
 
 ### (課題)オウム2倍返しBOTを作ってみよう
 
