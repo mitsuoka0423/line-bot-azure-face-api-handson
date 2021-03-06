@@ -18,10 +18,60 @@
 
 > ボットとは？：https://www.cloudflare.com/ja-jp/learning/bots/what-is-a-bot/
 
-最近では、チャットボットやツイートボット、SEOの分野ではGooglebotなどが有名です。
+最近では、チャットボットやツイートボット、SEOの分野ではGooglebotなど、様々な`Bot`があります。
 
-LINE Botとは、LINEアプリ上で動くプログラムのことです。  
+LINE Botとは、LINEアプリ上で自動で返信してくれるプログラムのことです。  
 LINEアプリとプログラムの連携には、LINEが提供している`Messaging API`を利用します。
+
+#### APIとは？
+
+APIとは、`Application Programming Interface`の略で、つまりインターフェースです。  
+APIの中でも、Web APIが提供されているサービスでは、複雑なプログラミングを行うことなく、HTTP経由でサービスを利用できるため、自身が開発しているプロダクトに簡単に組み込むことができます。
+
+なにかのサービスを利用する際に、どんなサービスでもある程度の統一感のある利用方法が用意されている、というイメージで良いと思います。
+
+現在、色々なサービスがAPIを提供しています。  
+例えば、
+
+- Yahoo!天気 (https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/weather.html)
+- YouTube (https://developers.google.cn/youtube/iframe_api_reference?hl=ja)
+- Twitter (https://developer.twitter.com/ja/docs)
+- Facebook (https://developers.facebook.com/docs/apis-and-sdks?locale=ja_JP)
+
+などなど。
+
+> すぐに使えるAPIまとめ：https://protoout.studio/posts/public-apis-api-get
+
+では、無料で利用できるAPIが100個以上紹介されています。
+
+#### 有名なLINE Bot
+
+##### プッシュ/プル/コントロール型
+
+- JR東日本 Chat Bot（[https://info.jreast-chat.com/](https://info.jreast-chat.com/)）
+- ヤマト運輸（[https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/](https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/)）
+
+##### 広告プッシュ型
+
+- ユニクロ・GU（[http://official-blog.line.me/ja/archives/28533966.html](http://official-blog.line.me/ja/archives/28533966.html)）
+- 楽天（[http://official-blog.line.me/ja/archives/24736939.html](http://official-blog.line.me/ja/archives/24736939.html)）
+
+また最近、LINE Botのユースケースが発表されました。LINE Botを作る際に参考にしてみると良いと思います。
+
+> LINE API UseCase - ビジネスの悩みをLINEを使って解決：https://lineapiusecase.com/ja/top.html
+
+#### なぜLINE Botか
+
+##### 一般的なメリット
+
+- ユーザーに利用してもらうときにアプリのインストールが不要。（友達登録だけでOK！簡単！）
+- ユーザーへのプッシュ通知を簡単に送ることができる。（量が多いとお金がかかる）
+
+##### プロトタイピング観点でのメリット
+
+- LINEのチャット画面を利用するのでUIを最初から考える必要がなく、プロトタイプの価値の創造に注力できる。
+  - 必要に応じて、凝ったUIも実現できる。（[FlexMessage](https://developers.line.biz/ja/docs/messaging-api/using-flex-messages/)や[LIFF](https://developers.line.biz/ja/docs/liff/overview/)を利用）
+- Node.jsのSDKが公式に用意されており、UIからサーバーまでをJavaScriptで書くことで、最小限の学習で作ることができる。
 
 ### システム概要図
 
@@ -30,9 +80,13 @@ LINEアプリとプログラムの連携には、LINEが提供している`Messa
 
 <a href="https://gyazo.com/1ceade2f10b784b68f3bed71efcf83e3"><img src="https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3.png" alt="Image from Gyazo" width="933"/></a>
 
+#### オウム返しBotのシステム概要図
+
 `1. オウム返しBotを作ろう`では、LINEアプリから送信した文字列をサーバーで受け取り、LINEアプリにそのまま返すオウム返しBotを作成します。
 
 <a href="https://gyazo.com/ef380d63c53fba3e41b79216fb7f0070"><img src="https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png" alt="Image from Gyazo" width="822"/></a>
+
+#### 感情分析AI+LINE Botのシステム概要図
 
 `2. 感情分析AIと組み合わせよう`では、LINEアプリから送信した画像を、Azure Face APIに送信し感情分析します。  
 その結果をサーバーで変換して、LINEアプリに結果を表示します。
@@ -168,6 +222,41 @@ Botページに表示されているQRコードを読み取り、Botと友達に
 <iframe width="414" height="736" src="https://www.youtube.com/embed/BIkEuLy2tAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 オウム返しBotの作成は以上で完了です！  
+
+### (課題)オウム2倍返しBOTを作ってみよう
+
+完成イメージ
+
+<a href="https://gyazo.com/472f5b31bf7d3ab224ffdece712b05b1"><img src="https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1.png" alt="Image from Gyazo" width="437"/></a>
+
+### (課題)オウム返しBotにキャラ付けしよう
+
+NARUTO風
+
+<a href="https://gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de"><img src="https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de.png" alt="Image from Gyazo" width="441"/></a>
+
+### (任意)自動応答メッセージをオフにする
+
+LINE Botはデフォルトでは、`あいさつメッセージ`と`応答メッセージ`がオンになっています。  
+この設定を変更しましょう。
+
+Messaging API設定タブ > 応答メッセージ > `編集`をクリックし、LINE公式アカウント設定画面を開きます。
+
+<a href="https://gyazo.com/b9ba1653be88c67ff0661251c545ba8f"><img src="https://i.gyazo.com/b9ba1653be88c67ff0661251c545ba8f.png" alt="Image from Gyazo" width="1076"/></a>
+
+不要なメッセージをオフにします。
+
+<a href="https://gyazo.com/bd8567c7e1c492642e61e31fef9390b2"><img src="https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2.png" alt="Image from Gyazo" width="1076"/></a>
+
+これでオウム返しだけが返ってくるようになりました。
+
+## まとめ
+
+- LINE DevelopersからLINE Botのチャンネルを作成し、友達登録しました。
+- LINEアプリ⇔Expressサーバーでオウム返しBotを作成しました。
+
+<a href="https://gyazo.com/ef380d63c53fba3e41b79216fb7f0070"><img src="https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png" alt="Image from Gyazo" width="822"/></a>
+
 次はAIのサービスの一つである`Face API`と組み合わせていきます。
 
 > ！！注意！！  
